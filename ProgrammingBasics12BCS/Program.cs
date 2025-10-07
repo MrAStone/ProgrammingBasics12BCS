@@ -147,24 +147,62 @@ namespace ProgrammingBasics12BCS
             {
                 Console.WriteLine(i);
             }
-            for(int i = 0; i < 10; i += 3)
+            for (int i = 0; i < 10; i += 3)
             {
                 Console.WriteLine(i);
             }
-            for(int i = 10; i >= 0; i--)
+            for (int i = 10; i >= 0; i--)
             {
                 Console.WriteLine(i);
             }
             string test = "HELLO WORLD";
-            for(int i = 0;i< test.Length; i++)
+            for (int i = 0; i < test.Length; i++)
             {
                 Console.WriteLine(test[i]);
             }
-            for(int i = test.Length - 1; i >= 0; i--)
+            for (int i = test.Length - 1; i >= 0; i--)
             {
                 Console.Write(test[i]);
             }
             Console.WriteLine();
+
+            foreach (char c in test)
+            {
+                Console.WriteLine(c);
+            }
+
+            int[] arrayOfNums = { 36, 5, 4, 9, 11, 55, 88, 44, 32, 1 };
+            int sum = 0;
+            foreach(int i in arrayOfNums)
+            {
+                sum += i;
+            }
+            Console.WriteLine(sum/(arrayOfNums.Length*1.0)); // convert one value to a double
+
+            // nested for loops
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+                for(int j = 0; j < 10; j++)
+                {
+                    Console.WriteLine(j);
+                }
+            }
+
+            // condition control
+
+            int x = 1;
+            while (x < 10) // loops 0 or more times
+            {
+                x++;
+            }
+            Console.WriteLine(x);
+            x = 1;
+            do // loops 1 or more times
+            {
+                x++;
+            }while(x < 10);
+            Console.WriteLine(x);
 
         }
     }
